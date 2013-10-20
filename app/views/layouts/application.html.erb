@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CanTeen</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<div id="header">
+<a href="/" class="logo">Canteen Ireland</a>
+
+		<ul id="networks" style="margin-top:0px">
+			<li><a href="#" class="linkedin" rel="external">LinkedIn</a></li>		
+			<li><a href="http://www.youtube.com/user/CanTeenIreland1" class="youtube" rel="external">Youtube</a></li>
+			<li><a href="https://twitter.com/CanTeen_Ireland" class="twitter" rel="external">Twitter</a></li>
+			<li><a href="https://www.facebook.com/CanTeenIreland" class="facebook" rel="external">Facebook</a></li>
+		</ul>
+
+</div> <!-- header -->
+
+
+	<%= render "layouts/main_nav"%>
+
+
+	 <div id="master">
+      <div id="page">
+        <div class="wrapper">
+          <div class="spacer">
+
+
+			<%# unless params[:action] == 'home'%>
+			<%= render "layouts/left_hand_column"%>
+			<%# end %>
+			<%= yield %>
+			<%= render "layouts/right_hand_column"%>
+			 <div style="clear:both"></div>
+			<%= render "layouts/footer"%>
+          </div><!-- spacer -->
+         
+        </div>
+        <!-- /wrapper -->
+       
+      </div>
+       <span class="foot-holder"></span>
+      <!-- /page -->
+    </div>
+    <!-- /master -->
+		
+</body>
+</html>

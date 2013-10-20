@@ -1,0 +1,10 @@
+<div id="col1" class="column">	
+	<% if params[:controller] == 'pages' %>
+			<h4><%= @page.root.name %></h4>
+		<div id="sub_nav">
+			<%= render "shared/submenu_pages" , pages: @page.root.children %>
+		</div>
+	<% else %>
+		<h4>Second Navigation</h4>	
+	<% end %>
+</div>
